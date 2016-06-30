@@ -28,9 +28,26 @@ GameObject:
   - 124: {fileID: 12483810}
   - 81: {fileID: 8100706}
   - 114: {fileID: 11406330}
+  - 114: {fileID: 11413462}
+  - 114: {fileID: 11452546}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &156980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412502}
+  m_Layer: 0
+  m_Name: Footstep Source
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +63,8 @@ GameObject:
   - 143: {fileID: 14378412}
   - 114: {fileID: 11457204}
   - 114: {fileID: 11497062}
+  - 114: {fileID: 11400238}
+  - 114: {fileID: 11480352}
   - 114: {fileID: 11426246}
   m_Layer: 0
   m_Name: Player
@@ -54,6 +73,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &412502
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 476476}
+  m_RootOrder: 1
 --- !u!4 &429152
 Transform:
   m_ObjectHideFlags: 1
@@ -79,6 +111,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 493074}
+  - {fileID: 412502}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &493074
@@ -143,6 +176,23 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149858}
   m_Enabled: 1
+--- !u!114 &11400238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba5353bcf0315a439ba80ada4cff71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fear: 0
+  fearMeter: 0
+  fishEye: {fileID: 11413462}
+  maxFishEye: 0.5
+  motionBlur: {fileID: 11452546}
+  maxMotionBlur: 0.5
 --- !u!114 &11406330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +214,20 @@ MonoBehaviour:
   rotationY: 0
   startSensitivityX: 0
   startSensitivityY: 0
+--- !u!114 &11413462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strengthX: 0
+  strengthY: 0
+  fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
 --- !u!114 &11426246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +240,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
+--- !u!114 &11452546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a2083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
+  blurAmount: 0
+  extraBlur: 0
 --- !u!114 &11457204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,6 +275,47 @@ MonoBehaviour:
   rotationY: 0
   startSensitivityX: 0
   startSensitivityY: 0
+--- !u!114 &11480352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed01879f07b14624691bb5b72333ef93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SurfaceTypes:
+  - RandomPitch: {x: 1, y: 1.5}
+    Foldout: 1
+    WalkSoundsFoldout: 0
+    RunSoundsFoldout: 0
+    TexturesFoldout: 1
+    SurfaceName: Concrete
+    WalkSounds:
+    - {fileID: 8300000, guid: 215ef41201a3a63468fbc978def20273, type: 3}
+    - {fileID: 8300000, guid: e60c3f9caf24c274ebe4afdd579db56b, type: 3}
+    - {fileID: 8300000, guid: 6ceefd46bf3433d4ab9a0ca152be1f66, type: 3}
+    - {fileID: 8300000, guid: 29917616e1bc75d4eb3d956d429cd1cc, type: 3}
+    - {fileID: 8300000, guid: bba3c4eb28817b644aa89f84d38df066, type: 3}
+    - {fileID: 8300000, guid: b302841d2be7a6647b6d5406634c4935, type: 3}
+    RunSounds:
+    - {fileID: 8300000, guid: 8bd7b7cbff6cd8c4a802d9ad109b74e4, type: 3}
+    - {fileID: 8300000, guid: 5ccb37d21d7b6304abe4712f69022ac3, type: 3}
+    - {fileID: 8300000, guid: 36c9c06bfef7e254c8c4ef4f57c8e9b8, type: 3}
+    - {fileID: 8300000, guid: cf3a5ee1388634c439ad68990f87001e, type: 3}
+    - {fileID: 8300000, guid: 5c6c68cb3d6bf594abfcf7ab8ea3759d, type: 3}
+    - {fileID: 8300000, guid: 779985e8a861eb34faf268021a840dbc, type: 3}
+    Textures:
+    - {fileID: 0}
+  footstepsSource: {fileID: 156980}
+  audioStepLengthCrouch: 0.7
+  audioStepLengthWalk: 0.6
+  audioStepLengthRun: 0.4
+  minWalkSpeed: 2.5
+  maxWalkSpeed: 3
+  controller: {fileID: 14378412}
 --- !u!114 &11497062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,8 +331,8 @@ MonoBehaviour:
   inputY: 0
   cameraGO: {fileID: 138984}
   crouchSpeed: 2
-  walkSpeed: 4
-  runSpeed: 6
+  walkSpeed: 3
+  runSpeed: 5
   jumpSpeed: 6
   gravity: 24
   moveDirection: {x: 0, y: 0, z: 0}

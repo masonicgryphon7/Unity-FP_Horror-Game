@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isPaused = false;
     }
 
     void Update()
@@ -16,7 +17,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
             isPaused = !isPaused;
 
-        if(isPaused)
+        if(!isPaused)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
