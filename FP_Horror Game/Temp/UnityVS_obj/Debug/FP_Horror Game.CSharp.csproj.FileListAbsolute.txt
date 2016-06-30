@@ -1,0 +1,12 @@
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+D:\FP_Horror Game\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\FP_Horror Game\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+D:\FP_Horror Game\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
